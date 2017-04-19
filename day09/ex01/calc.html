@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>day09/ex01</title>
+	<style type="text/css">
+		body {
+			padding: 5%;
+		}
+		#calc {
+			margin:  auto;
+			width: 200px;
+			height: 200px;
+			border-radius: 5%;
+			background-color: grey;
+			border: 1px solid black;
+		}
+		#a #b #oper {
+			margin: auto;
+		}
+	</style>
+<body>
+	<div id="calc">
+		<input id="a" type="text" name="a_input" placeholder="[0-9]"><br>
+		<select id="oper">
+			<option>+</option>
+			<option>-</option>
+			<option>*</option>
+			<option>/</option>
+			<option>%</option>
+		</select><br>
+		<input id="b" type="text" name="b_input" placeholder="[0-9]"><br>
+		<input type="submit" name="submit" value="Try me!" onclick="calc();">
+	</div>
+	<script type="text/javascript">
+	
+	setInterval(function (){alert("Please, use me..."); console.log("Please, use me...");}, 30000);
+
+	function calc() {
+		var a;
+		var b;
+		var	oper;
+		var res;
+
+		a = document.getElementById('a').value;
+		b = document.getElementById('b').value;
+		oper = document.getElementById('oper').value;
+
+		if (/^\d+$/.test(a) && /^\d+$/.test(b))
+		{
+			a = parseInt(a);
+			b = parseInt(b);
+			if (oper == "+")
+				res = a + b;
+			else if (oper == "-")
+				res = a - b;
+			else if (oper == "*")
+				res = a * b;
+			else if (oper == "/" || oper == "%")
+			{
+				if (b == 0)
+					res = "It’s over 9000!";
+				else
+				{
+					if (oper == "/")
+						res = a / b;
+					else
+						res = a % b;
+				}
+			}
+		}
+		else
+		{
+			res = "Error :(";
+		}
+
+		console.log(res);
+		alert(res);
+	}
+	</script>
+</body>
+</html>

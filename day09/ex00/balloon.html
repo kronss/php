@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>day09/ex00</title>
+	<style type="text/css">
+		body {
+			padding: 5%;
+
+		}
+		#obj {
+			margin:  auto;
+			/*width: 200px;
+			height: 200px;*/
+			border-radius: 50%;
+		}
+	</style>
+<body>
+	<div id="obj" onclick="increase();" onmouseout="decrease();"></div>
+
+	<script type="text/javascript">
+		document.getElementById('obj').style.width = "200px";
+		document.getElementById('obj').style.height = "200px";
+		document.getElementById('obj').style.backgroundColor = "red";
+
+		function getColor()
+		{
+			
+			if (this.i % 3 == 0)
+				color = "red";
+			else if (this.i % 3 == 1)
+				color = "green";
+			else if (this.i % 3 == 2)
+				color = "blue";
+
+			document.getElementById('obj').style.backgroundColor = color;
+		}
+
+		function increase() {
+			if (typeof this.i == 'undefined')
+				this.i = 0;
+			this.i++;
+			getColor();
+			if (parseInt(document.getElementById('obj').style.width) + 10 <= 420)
+			{
+				document.getElementById('obj').style.width = parseInt(document.getElementById('obj').style.width, 10) + 10 + "px";
+				document.getElementById('obj').style.height = parseInt(document.getElementById('obj').style.height, 10) + 10 + "px";
+			}
+			else
+			{
+				document.getElementById('obj').style.width = "200px";
+				document.getElementById('obj').style.height = "200px";
+			}
+		}
+
+		function decrease() {
+			if (parseInt(document.getElementById('obj').style.width) > 200)
+			{
+				this.i++;
+				this.i++;
+				getColor();
+				document.getElementById('obj').style.width = parseInt(document.getElementById('obj').style.width, 10) - 5 + "px";
+				document.getElementById('obj').style.height = parseInt(document.getElementById('obj').style.height, 10) - 5 + "px";
+				
+			}
+		}
+	</script>
+</body>
+</html>

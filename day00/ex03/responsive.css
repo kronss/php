@@ -1,0 +1,92 @@
+body {
+	background-image: url("https://previews.123rf.com/images/vska/vska1401/vska140100072/25299194-abstract-chemical-formula-technology-business-science-background-Stock-Vector.jpg");
+	background-repeat: repeat;
+	background-position: center;
+	background-size: 100%;
+	background-attachment: fixed;
+	padding: 2vw;
+}
+
+.top {
+	width: 80%;
+}
+
+.bottom {
+	width: 75%;
+}
+
+p {
+	margin: 0%;
+}
+
+.non-met{
+	background-color: green; 
+}
+
+.noble-gases{
+	background-color: #03A8F4; 
+}
+
+.halogen {
+	background-color: #26C6DA ;
+}
+
+.alkali-metal {
+	background-color: #FF8928 ;
+}
+
+.alkaline-earth {
+	background-color: yellow ;
+}
+
+.metalloids {
+	background-color: #4CB5AB ;
+}
+
+.post {
+	background-color: #8FA3AD ;
+}
+
+.transition {
+	background-color: #B06E6C ;
+}
+
+.lanthanoids {background-color: 
+	#F49786 ;
+}
+
+.actinoids {
+	background-color: #B39DDB ;
+}
+
+.header{
+	text-align: center;
+	vertical-align: center;
+	font-family: "Arial";
+	font-size: 4vw;
+}
+
+.cell {
+	width: 3vw;
+	height: 3vh;
+	padding: 0.5vw;
+}
+
+.elem-nbr {
+	text-align: left;
+	vertical-align: bottom;
+	font-size: 0.8vw;
+
+}
+
+.elem-smb {
+	font-size: 1.5vw;
+	font-weight: bold;
+	text-align: center;
+}
+
+.elem-wht {
+	font-size: 0.8vw;
+	text-align: right;
+	vertical-align: top;
+}
